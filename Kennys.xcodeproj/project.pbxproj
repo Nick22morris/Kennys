@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */; };
 		BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F026E2798800866758 /* AppDelegate.swift */; };
 		BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F226E2798800866758 /* SceneDelegate.swift */; };
 		BBF4F5F526E2798800866758 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F426E2798800866758 /* ContentView.swift */; };
 		BBF4F5F726E2798900866758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F5F626E2798900866758 /* Assets.xcassets */; };
 		BBF4F5FA26E2798900866758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F5F926E2798900866758 /* Preview Assets.xcassets */; };
 		BBF4F5FD26E2798900866758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F5FB26E2798900866758 /* LaunchScreen.storyboard */; };
+		BBF4F60726E27A0500866758 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F60626E27A0500866758 /* HomeView.swift */; };
+		BBF4F60A26E27A3600866758 /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F60926E27A3600866758 /* CrewView.swift */; };
+		BBF4F60D26E27A5800866758 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F60C26E27A5800866758 /* MenuView.swift */; };
+		BBF4F60F26E27A8A00866758 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F60E26E27A8A00866758 /* FoodView.swift */; };
+		BBF4F61126E27A9F00866758 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61026E27A9F00866758 /* OrderView.swift */; };
+		BBF4F61326E27ABA00866758 /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61226E27ABA00866758 /* DealsView.swift */; };
+		BBF4F61526E27ACE00866758 /* CookinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61426E27ACE00866758 /* CookinView.swift */; };
+		BBF4F61726E27B0200866758 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61626E27B0200866758 /* FoodModel.swift */; };
+		BBF4F61A26E27B5B00866758 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61926E27B5B00866758 /* CategoryView.swift */; };
+		BBF4F61C26E27B6C00866758 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61B26E27B6C00866758 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.debug.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.debug.xcconfig"; sourceTree = "<group>"; };
+		5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.release.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.release.xcconfig"; sourceTree = "<group>"; };
 		BBF4F5ED26E2798800866758 /* Kennys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kennys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF4F5F026E2798800866758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF4F5F226E2798800866758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,17 @@
 		BBF4F5F926E2798900866758 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBF4F5FC26E2798900866758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBF4F5FE26E2798900866758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF4F60626E27A0500866758 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BBF4F60926E27A3600866758 /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
+		BBF4F60C26E27A5800866758 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BBF4F60E26E27A8A00866758 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		BBF4F61026E27A9F00866758 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		BBF4F61226E27ABA00866758 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
+		BBF4F61426E27ACE00866758 /* CookinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookinView.swift; sourceTree = "<group>"; };
+		BBF4F61626E27B0200866758 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		BBF4F61926E27B5B00866758 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		BBF4F61B26E27B6C00866758 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kennys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19ED9AB247F3EA115B3AB294 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */,
+				5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8ED30A1B5757607342E8F812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBF4F5E426E2798800866758 = {
 			isa = PBXGroup;
 			children = (
 				BBF4F5EF26E2798800866758 /* Kennys */,
 				BBF4F5EE26E2798800866758 /* Products */,
+				19ED9AB247F3EA115B3AB294 /* Pods */,
+				8ED30A1B5757607342E8F812 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +101,10 @@
 		BBF4F5EF26E2798800866758 /* Kennys */ = {
 			isa = PBXGroup;
 			children = (
-				BBF4F5F026E2798800866758 /* AppDelegate.swift */,
-				BBF4F5F226E2798800866758 /* SceneDelegate.swift */,
-				BBF4F5F426E2798800866758 /* ContentView.swift */,
+				BBF4F60426E279BC00866758 /* App Management */,
+				BBF4F61826E27B0900866758 /* Models */,
+				BBF4F60526E279DE00866758 /* Runner */,
+				BBF4F60826E27A0D00866758 /* Displays */,
 				BBF4F5F626E2798900866758 /* Assets.xcassets */,
 				BBF4F5FB26E2798900866758 /* LaunchScreen.storyboard */,
 				BBF4F5FE26E2798900866758 /* Info.plist */,
@@ -75,6 +121,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BBF4F60426E279BC00866758 /* App Management */ = {
+			isa = PBXGroup;
+			children = (
+				BBF4F5F026E2798800866758 /* AppDelegate.swift */,
+				BBF4F5F226E2798800866758 /* SceneDelegate.swift */,
+			);
+			path = "App Management";
+			sourceTree = "<group>";
+		};
+		BBF4F60526E279DE00866758 /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				BBF4F5F426E2798800866758 /* ContentView.swift */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+		BBF4F60826E27A0D00866758 /* Displays */ = {
+			isa = PBXGroup;
+			children = (
+				BBF4F60626E27A0500866758 /* HomeView.swift */,
+				BBF4F60926E27A3600866758 /* CrewView.swift */,
+				BBF4F60C26E27A5800866758 /* MenuView.swift */,
+				BBF4F60E26E27A8A00866758 /* FoodView.swift */,
+				BBF4F61026E27A9F00866758 /* OrderView.swift */,
+				BBF4F61226E27ABA00866758 /* DealsView.swift */,
+				BBF4F61426E27ACE00866758 /* CookinView.swift */,
+			);
+			path = Displays;
+			sourceTree = "<group>";
+		};
+		BBF4F61826E27B0900866758 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBF4F61626E27B0200866758 /* FoodModel.swift */,
+				BBF4F61926E27B5B00866758 /* CategoryView.swift */,
+				BBF4F61B26E27B6C00866758 /* MapView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBF4F60126E2798900866758 /* Build configuration list for PBXNativeTarget "Kennys" */;
 			buildPhases = (
+				56620616A6F39011E04E3421 /* [CP] Check Pods Manifest.lock */,
 				BBF4F5E926E2798800866758 /* Sources */,
 				BBF4F5EA26E2798800866758 /* Frameworks */,
 				BBF4F5EB26E2798800866758 /* Resources */,
+				A4A8FC24838C867F5B5372B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,13 +229,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56620616A6F39011E04E3421 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kennys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A8FC24838C867F5B5372B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kennys/Pods-Kennys-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kennys/Pods-Kennys-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kennys/Pods-Kennys-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBF4F5E926E2798800866758 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF4F60A26E27A3600866758 /* CrewView.swift in Sources */,
+				BBF4F61126E27A9F00866758 /* OrderView.swift in Sources */,
+				BBF4F61A26E27B5B00866758 /* CategoryView.swift in Sources */,
+				BBF4F61726E27B0200866758 /* FoodModel.swift in Sources */,
+				BBF4F61C26E27B6C00866758 /* MapView.swift in Sources */,
+				BBF4F60D26E27A5800866758 /* MenuView.swift in Sources */,
+				BBF4F60F26E27A8A00866758 /* FoodView.swift in Sources */,
 				BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */,
+				BBF4F60726E27A0500866758 /* HomeView.swift in Sources */,
 				BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */,
+				BBF4F61526E27ACE00866758 /* CookinView.swift in Sources */,
+				BBF4F61326E27ABA00866758 /* DealsView.swift in Sources */,
 				BBF4F5F526E2798800866758 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +424,7 @@
 		};
 		BBF4F60226E2798900866758 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +446,7 @@
 		};
 		BBF4F60326E2798900866758 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

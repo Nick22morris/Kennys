@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "dfd0943a-fdce-4940-bbd2-532207e1e42a-retina-large-jpeg.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "dfd0943a-fdce-4940-bbd2-532207e1e42a-retina-large-jpeg@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "dfd0943a-fdce-4940-bbd2-532207e1e42a-retina-large-jpeg@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
