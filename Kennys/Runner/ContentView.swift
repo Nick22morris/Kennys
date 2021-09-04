@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 struct ContentView: View {
+   
     @State private var selection = 0
     @State var show = false
     @State var tag1 = 0
@@ -16,9 +17,11 @@ struct ContentView: View {
     @State var tag4 = 2
     @State var tag5 = 3
     let db = Firestore.firestore()
+    @State var model = ToggleModel()
     var body: some View {
         TabView(selection: $selection) {
             HomeView()
+                .environment(\.colorScheme, .dark)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                         //.foregroundColor(.black)
@@ -49,8 +52,10 @@ struct ContentView: View {
                             }
                         }
                 }
+                .preferredColorScheme(.dark)
                 .tag(tag1)
             MenuView()
+                .environment(\.colorScheme, .dark)
                 .tabItem {
                     Label("Menu", systemImage: "list.dash")
                     //.foregroundColor(.black)
@@ -59,6 +64,7 @@ struct ContentView: View {
             if show == true {
                 
                 OrderView()
+                    .environment(\.colorScheme, .dark)
                     .tabItem {
                         Label("Order", systemImage: "cart.fill")
                         //.foregroundColor(.black)
@@ -73,6 +79,7 @@ struct ContentView: View {
 //                .tag(tag4)
 //
             CookinView()
+                .environment(\.colorScheme, .dark)
                 .tabItem {
                     Label("What’s Cooking?", systemImage: "dollarsign.square.fill")
                     //.foregroundColor(.black)
@@ -81,10 +88,15 @@ struct ContentView: View {
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView()//.preferredColorScheme(.dark)
     }
 }
-
+struct ToggleModel {
+    var isDark: Bool = true {
+        didSet {
+            SceneDelegate.shared?.window!.overrideUserInterfaceStyle = isDark ? .dark : .dark
+        }
+    }
+}

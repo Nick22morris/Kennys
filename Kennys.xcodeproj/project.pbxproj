@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,8 @@
 		BBF4F61726E27B0200866758 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61626E27B0200866758 /* FoodModel.swift */; };
 		BBF4F61A26E27B5B00866758 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61926E27B5B00866758 /* CategoryView.swift */; };
 		BBF4F61C26E27B6C00866758 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61B26E27B6C00866758 /* MapView.swift */; };
+		BBF4F61F26E288AA00866758 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = BBF4F61E26E288AA00866758 /* iPhoneNumberField */; };
+		BBF4F62126E2A7F600866758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		BBF4F61626E27B0200866758 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		BBF4F61926E27B5B00866758 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BBF4F61B26E27B6C00866758 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BBF4F62226E3324D00866758 /* Kennys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kennys.entitlements; sourceTree = "<group>"; };
 		E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kennys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */,
+				BBF4F61F26E288AA00866758 /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +73,6 @@
 				594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */,
 				5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,12 +105,14 @@
 		BBF4F5EF26E2798800866758 /* Kennys */ = {
 			isa = PBXGroup;
 			children = (
+				BBF4F62226E3324D00866758 /* Kennys.entitlements */,
 				BBF4F60426E279BC00866758 /* App Management */,
 				BBF4F61826E27B0900866758 /* Models */,
 				BBF4F60526E279DE00866758 /* Runner */,
 				BBF4F60826E27A0D00866758 /* Displays */,
 				BBF4F5F626E2798900866758 /* Assets.xcassets */,
 				BBF4F5FB26E2798900866758 /* LaunchScreen.storyboard */,
+				BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */,
 				BBF4F5FE26E2798900866758 /* Info.plist */,
 				BBF4F5F826E2798900866758 /* Preview Content */,
 			);
@@ -180,6 +186,9 @@
 			dependencies = (
 			);
 			name = Kennys;
+			packageProductDependencies = (
+				BBF4F61E26E288AA00866758 /* iPhoneNumberField */,
+			);
 			productName = Kennys;
 			productReference = BBF4F5ED26E2798800866758 /* Kennys.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +216,9 @@
 				Base,
 			);
 			mainGroup = BBF4F5E426E2798800866758;
+			packageReferences = (
+				BBF4F61D26E288AA00866758 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = BBF4F5EE26E2798800866758 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF4F5FD26E2798900866758 /* LaunchScreen.storyboard in Resources */,
+				BBF4F62126E2A7F600866758 /* GoogleService-Info.plist in Resources */,
 				BBF4F5FA26E2798900866758 /* Preview Assets.xcassets in Resources */,
 				BBF4F5F726E2798900866758 /* Assets.xcassets in Resources */,
 			);
@@ -428,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
@@ -450,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
@@ -488,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBF4F61D26E288AA00866758 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBF4F61E26E288AA00866758 /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBF4F61D26E288AA00866758 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBF4F5E526E2798800866758 /* Project object */;
 }

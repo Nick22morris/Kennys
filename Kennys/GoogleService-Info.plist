@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1016905160816-erdfqk8cnkflmnjq91ic3gllmbqb61i7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1016905160816-erdfqk8cnkflmnjq91ic3gllmbqb61i7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBd-siB0zwdAo8ryf9_Jaz7cRGtj68t9TE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1016905160816</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kennysburgerjoint.Kennys</string>
+	<key>PROJECT_ID</key>
+	<string>kennys-burger-joint</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kennys-burger-joint.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1016905160816:ios:7d8f6a6e93d1d9c5e4bcb5</string>
+</dict>
+</plist>
