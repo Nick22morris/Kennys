@@ -119,17 +119,17 @@ let foodBurgers = [
 ]
 let foodSandwiches =
     [FoodCell(foodName: "Southern Fried Chicken", toppings: "Chipotle Ranch, Lettuce, Pickles", image: "chicken", price: "$8.99", type: "Sandwich"),
-     FoodCell(foodName: "Smoked Brisket Grilled Cheese", toppings: "Sourdough, Cheddar, Pepperjack, White American", image: "brisket", price: "$9.99", type: "Sandwich"),
-     FoodCell(foodName: "Steak Bomb", toppings: "Hoagie, Shaved Ribeye, Mushrooms, Onions, Peppers, White American, Provolone", image: "steak", price: "$10.99", type: "Sandwich"),
-     FoodCell(foodName: "Tuna Steak", toppings: "Cajun Spiced, Bacon, Wasabi Mayo, Lettuce, Tomato, Onion", image: "tuna", price: "$11.99", type: "Sandwich")
+     FoodCell(foodName: "Smoked Brisket Grilled Cheese", toppings: "Sourdough, Cheddar, Pepperjack, White American", image: "brisket", price: "$10.99", type: "Sandwich"),
+     FoodCell(foodName: "Steak Bomb", toppings: "Hoagie, Shaved Ribeye, Mushrooms, Onions, Peppers, White American, Provolone", image: "steak", price: "$11.99", type: "Sandwich"),
+     FoodCell(foodName: "Tuna Steak", toppings: "Cajun Spiced, Bacon, Wasabi Mayo, Lettuce, Tomato, Onion", image: "tuna", price: "$12.99", type: "Sandwich")
     ]
 let foodSalads = [
-    FoodCell(foodName: "Greek", toppings: "Greens, Feta, Kalamata Olives, Cucumber, Tomato, Red Onions, Pepperoncinis, Greek Dressing. Add Chicken ($3.99), Ahi Tuna ($6.99) or a Burger patty ($3.99)", image: "greek", price: "$7.99", type: "Salad"),
-    FoodCell(foodName: "Blue Cheese", toppings: "Iceberg, Tomato, Onion, Bacon, Blue Cheese Dressing. Add Chicken ($3.99), Ahi Tuna ($6.99) or a Burger patty ($3.99)", image: "blueCheese", price: "$7.99", type: "Salad"),
-    FoodCell(foodName: "Asian", toppings: "Greens, Cucumber, Tomato, Avocado, Mango, Carrots, Red Onion, Toasted Cashews, Won Tons, Sesame Ginger Vinaigrette. Add Chicken ($3.99), Ahi Tuna ($6.99) or a Burger patty ($3.99)", image: "asian", price: "$7.99", type: "Salad")
+    FoodCell(foodName: "Greek", toppings: "Greens, Feta, Kalamata Olives, Cucumber, Tomato, Red Onions, Pepperoncinis, Greek Dressing. Add Chicken ($4.99), Ahi Tuna ($7.99) or a Burger patty ($4.99)", image: "greek", price: "$7.99", type: "Salad"),
+    FoodCell(foodName: "Blue Cheese", toppings: "Iceberg, Tomato, Onion, Bacon, Blue Cheese Dressing. Add Chicken ($4.99), Ahi Tuna ($7.99) or a Burger patty ($4.99)", image: "blueCheese", price: "$7.99", type: "Salad"),
+    FoodCell(foodName: "Asian", toppings: "Greens, Cucumber, Tomato, Avocado, Mango, Carrots, Red Onion, Toasted Cashews, Won Tons, Sesame Ginger Vinaigrette. Add Chicken ($4.99), Ahi Tuna ($7.99) or a Burger patty ($4.99)", image: "asian", price: "$7.99", type: "Salad")
 ]
 let foodApps = [
-    FoodCell(foodName: "Cheese Fries", toppings: "Cheddar, Jalapeños, Bacon, Chives, Ranch", image: "cheeseFries", price: "$8.99", type: "Appetizer"),
+    FoodCell(foodName: "Cheese Fries", toppings: "Cheddar, Jalapeños, Bacon, Chives, Ranch", image: "cheeseFries", price: "$9.99", type: "Appetizer"),
     FoodCell(foodName: "Chips & Queso", toppings: "Bud's White Queso, Tortilla Chips", image: "queso", price: "$5.99", type: "Appetizer"),
     FoodCell(foodName: "Fried Pickles", toppings: "Served with Ranch", image: "pickles", price: "$6.99", type: "Appetizer"),
     FoodCell(foodName: "Onion Rings", toppings: "House Battered & Fried", image: "onionRings", price: "$6.99", type: "Appetizer"),
