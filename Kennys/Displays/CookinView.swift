@@ -47,20 +47,18 @@ struct dealCell: View {
     
     var body: some View {
         HStack {
-            RoundedRectangle(cornerRadius: 25.0)
-//                .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.newRed]), startPoint: .leading, endPoint: .trailing))
-                .frame(width: 300, height: 155)
-                .overlay(HStack {
-                    ZStack {
-                        Image(image)
-                            .resizable()
-                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            .frame(width: 300, height: 155, alignment: .center)
-                        
-                    }
-                })
-                .padding()
-                .frame(maxWidth: 550)
+            ZStack {
+                Image(image)
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                    .overlay(RoundedRectangle(cornerRadius: 25.0)
+                                .stroke(Color.white, lineWidth: 4))
+                    .shadow(radius: 7)
+                    //.offset(y: -140)
+                    .frame(width: 300, height: 155, alignment: .center)
+                
+            }
+            .padding()
         }
     }
 }

@@ -26,6 +26,7 @@
 		BBF4F61C26E27B6C00866758 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61B26E27B6C00866758 /* MapView.swift */; };
 		BBF4F61F26E288AA00866758 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = BBF4F61E26E288AA00866758 /* iPhoneNumberField */; };
 		BBF4F62126E2A7F600866758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */; };
+		BBF4F62426E33C2400866758 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F62326E33C2400866758 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BBF4F61B26E27B6C00866758 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBF4F62226E3324D00866758 /* Kennys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kennys.entitlements; sourceTree = "<group>"; };
+		BBF4F62326E33C2400866758 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kennys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			children = (
 				BBF4F5F026E2798800866758 /* AppDelegate.swift */,
 				BBF4F5F226E2798800866758 /* SceneDelegate.swift */,
+				BBF4F62326E33C2400866758 /* Launch Screen.storyboard */,
 			);
 			path = "App Management";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				BBF4F5FD26E2798900866758 /* LaunchScreen.storyboard in Resources */,
 				BBF4F62126E2A7F600866758 /* GoogleService-Info.plist in Resources */,
 				BBF4F5FA26E2798900866758 /* Preview Assets.xcassets in Resources */,
+				BBF4F62426E33C2400866758 /* Launch Screen.storyboard in Resources */,
 				BBF4F5F726E2798900866758 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
@@ -466,6 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
