@@ -1,74 +1,72 @@
 //
-//  MenuView.swift
-//  Kennys
+//  ContentView.swift
+//  kennyClip
 //
-//  Created by Nick Morris on 9/3/21.
+//  Created by Other user on 9/6/21.
 //
 
 import SwiftUI
-import Firebase
 
-struct MenuView: View {
+struct ContentView: View {
     @State var urlFire = "https://i.ytimg.com/vi/lcQvkhNXoNU/maxresdefault.jpg"
     @State var name = ""
     @State var type = ""
     @State var description = ""
     @State var price = ""
     @State var specialArray = [FoodCell]()
-    let db = Firestore.firestore()
     var body: some View {
         NavigationView {
             let frameHeight: CGFloat = 135.0
             VStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    HStack {
-                        Text("Monthly Special")
-                            .font(.headline)
-                            .padding(.leading, 15)
-                            .padding(.top, 5)
-                        Spacer()
-                    }
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(specialArray, id: \.foodName) { food in
-                                NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
-                                    SpecialItem(food: food)
-                                }
-                            }
-                        }
-                    }
-                    Text("")
-                        .onAppear() {
-                            db.collection("z-special").addSnapshotListener {
-                                querySnapshot, error in
-                                if let e = error {
-                                    name = "error fetching server"
-                                    print(e)
-                                } else {
-                                    specialArray = []
-                                    //staff = ["found documents"]
-                                    if let snapshotDocuments = querySnapshot?.documents {
-                                        //staff = ["got inside"]
-                                        for doc in snapshotDocuments {
-                                            let data = doc.data()
-                                            if let n = data["name"] as? String,
-                                               let d = data["description"] as? String,
-                                               let i = data["image"] as? String,
-                                               let p = data["price"] as? String,
-                                               let t = data["type"] as? String {
-                                                specialArray.append(FoodCell(foodName: n, toppings: d, image: i, price: p, type: t))
-                                                urlFire = i
-                                                name = n
-                                                type = t
-                                                description = d
-                                                price = p
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    Divider()
+//                    HStack {
+//                        Text("Monthly Special")
+//                            .font(.headline)
+//                            .padding(.leading, 15)
+//                            .padding(.top, 5)
+//                        Spacer()
+//                    }
+//                    ScrollView(.horizontal, showsIndicators: false) {
+//                        HStack(alignment: .top, spacing: 0) {
+//                            ForEach(specialArray, id: \.foodName) { food in
+//                                NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
+//                                    SpecialItem(food: food)
+//                                }
+//                            }
+//                        }
+//                    }
+//                    Text("")
+//                        .onAppear() {
+//                            db.collection("z-special").addSnapshotListener {
+//                                querySnapshot, error in
+//                                if let e = error {
+//                                    name = "error fetching server"
+//                                    print(e)
+//                                } else {
+//                                    specialArray = []
+//                                    //staff = ["found documents"]
+//                                    if let snapshotDocuments = querySnapshot?.documents {
+//                                        //staff = ["got inside"]
+//                                        for doc in snapshotDocuments {
+//                                            let data = doc.data()
+//                                            if let n = data["name"] as? String,
+//                                               let d = data["description"] as? String,
+//                                               let i = data["image"] as? String,
+//                                               let p = data["price"] as? String,
+//                                               let t = data["type"] as? String {
+//                                                specialArray.append(FoodCell(foodName: n, toppings: d, image: i, price: p, type: t))
+//                                                urlFire = i
+//                                                name = n
+//                                                type = t
+//                                                description = d
+//                                                price = p
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    Divider()
                     VStack(alignment: .leading) {
                         Text("Appetizers, Sides, Fries")
                             .font(.headline)
@@ -78,7 +76,7 @@ struct MenuView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 5) {
                                 ForEach(foodApps, id: \.foodName) { food in
-                                    NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
+                                    NavigationLink(destination: FoodViewClip(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
                                         CategoryItem(food: food)
                                     }
                                 }
@@ -94,7 +92,7 @@ struct MenuView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 5) {
                                 ForEach(foodBurgers, id: \.foodName) { food in
-                                    NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
+                                    NavigationLink(destination: FoodViewClip(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: food)) {
                                         CategoryItem(food: food)
                                     }
                                 }
@@ -110,7 +108,7 @@ struct MenuView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 5) {
                                 ForEach(foodSandwiches, id: \.foodName) { food in
-                                    NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: FoodCell(foodName: food.foodName, toppings: food.toppings, image: food.image, price: food.price, type: food.type))) {
+                                    NavigationLink(destination: FoodViewClip(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: FoodCell(foodName: food.foodName, toppings: food.toppings, image: food.image, price: food.price, type: food.type))) {
                                         CategoryItem(food: food)
                                     }
                                 }
@@ -126,7 +124,7 @@ struct MenuView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 5) {
                                 ForEach(foodSalads, id: \.foodName) { food in
-                                    NavigationLink(destination: FoodView(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: FoodCell(foodName: food.foodName, toppings: food.toppings, image: food.image, price: food.price, type: food.type))) {
+                                    NavigationLink(destination: FoodViewClip(name: food.foodName, type: food.type, description: food.toppings, price: food.price, image: food.image, item: FoodCell(foodName: food.foodName, toppings: food.toppings, image: food.image, price: food.price, type: food.type))) {
                                         CategoryItem(food: food)
                                     }
                                 }
@@ -179,12 +177,9 @@ struct MenuView: View {
         //    }
     }
 }
-struct MenuView_Previews: PreviewProvider {
+
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            MenuView()
-        }
-        //.preferredColorScheme(.light)
+        ContentView()
     }
 }
-

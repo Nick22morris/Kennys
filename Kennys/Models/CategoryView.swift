@@ -57,4 +57,12 @@ struct CategoryItem_Previews: PreviewProvider {
         CategoryItem(food: FoodCell(foodName: "Nick", toppings: "yunny", image: "Burger", price: "String", type: "Burger"))
     }
 }
-
+extension Image {
+    func data(url: URL) -> Self {
+        if let data = try? Data(contentsOf: url) {
+            return Image(uiImage: UIImage(data: data)!)
+                .resizable()
+        }
+        return self.resizable()
+    }
+}
