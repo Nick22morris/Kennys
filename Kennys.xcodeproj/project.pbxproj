@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */; };
+		BBE93B2A26E955DF00D51E51 /* ExpertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE93B2926E955DF00D51E51 /* ExpertView.swift */; };
 		BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F026E2798800866758 /* AppDelegate.swift */; };
 		BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F226E2798800866758 /* SceneDelegate.swift */; };
 		BBF4F5F526E2798800866758 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F426E2798800866758 /* ContentView.swift */; };
@@ -27,42 +28,9 @@
 		BBF4F61F26E288AA00866758 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = BBF4F61E26E288AA00866758 /* iPhoneNumberField */; };
 		BBF4F62126E2A7F600866758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F62026E2A7F600866758 /* GoogleService-Info.plist */; };
 		BBF4F62426E33C2400866758 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F62326E33C2400866758 /* Launch Screen.storyboard */; };
-		FE16C75226E6C95000DB71E2 /* kennyClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16C75126E6C95000DB71E2 /* kennyClipApp.swift */; };
-		FE16C75426E6C95000DB71E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16C75326E6C95000DB71E2 /* ContentView.swift */; };
-		FE16C75626E6C95100DB71E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16C75526E6C95100DB71E2 /* Assets.xcassets */; };
-		FE16C75926E6C95100DB71E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16C75826E6C95100DB71E2 /* Preview Assets.xcassets */; };
 		FE16C76526E6C95200DB71E2 /* kennyClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16C76426E6C95200DB71E2 /* kennyClipTests.swift */; };
 		FE16C77026E6C95200DB71E2 /* kennyClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16C76F26E6C95200DB71E2 /* kennyClipUITests.swift */; };
-		FE16C77426E6C95200DB71E2 /* kennyClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = FE16C74F26E6C95000DB71E2 /* kennyClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FE16C78026E6CE5700DB71E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF4F5F626E2798900866758 /* Assets.xcassets */; };
-		FE16C78126E6CF1700DB71E2 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61626E27B0200866758 /* FoodModel.swift */; };
-		FE16C78226E6CFDB00DB71E2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F61926E27B5B00866758 /* CategoryView.swift */; };
-		FE16C78526E6D04F00DB71E2 /* FoodViewClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16C78426E6D04F00DB71E2 /* FoodViewClip.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FE16C76126E6C95100DB71E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BBF4F5E526E2798800866758 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE16C74E26E6C95000DB71E2;
-			remoteInfo = kennyClip;
-		};
-		FE16C76C26E6C95200DB71E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BBF4F5E526E2798800866758 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE16C74E26E6C95000DB71E2;
-			remoteInfo = kennyClip;
-		};
-		FE16C77226E6C95200DB71E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BBF4F5E526E2798800866758 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE16C74E26E6C95000DB71E2;
-			remoteInfo = kennyClip;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FE16C77526E6C95200DB71E2 /* Embed App Clips */ = {
@@ -71,7 +39,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				FE16C77426E6C95200DB71E2 /* kennyClip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +48,7 @@
 /* Begin PBXFileReference section */
 		594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.debug.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.release.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.release.xcconfig"; sourceTree = "<group>"; };
+		BBE93B2926E955DF00D51E51 /* ExpertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertView.swift; sourceTree = "<group>"; };
 		BBF4F5ED26E2798800866758 /* Kennys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kennys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF4F5F026E2798800866758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF4F5F226E2798800866758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,20 +71,12 @@
 		BBF4F62226E3324D00866758 /* Kennys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kennys.entitlements; sourceTree = "<group>"; };
 		BBF4F62326E33C2400866758 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kennys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE16C74F26E6C95000DB71E2 /* kennyClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kennyClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE16C75126E6C95000DB71E2 /* kennyClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kennyClipApp.swift; sourceTree = "<group>"; };
-		FE16C75326E6C95000DB71E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FE16C75526E6C95100DB71E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE16C75826E6C95100DB71E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FE16C75A26E6C95100DB71E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE16C75B26E6C95100DB71E2 /* kennyClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kennyClip.entitlements; sourceTree = "<group>"; };
 		FE16C76026E6C95100DB71E2 /* kennyClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kennyClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16C76426E6C95200DB71E2 /* kennyClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kennyClipTests.swift; sourceTree = "<group>"; };
 		FE16C76626E6C95200DB71E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE16C76B26E6C95200DB71E2 /* kennyClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kennyClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16C76F26E6C95200DB71E2 /* kennyClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kennyClipUITests.swift; sourceTree = "<group>"; };
 		FE16C77126E6C95200DB71E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE16C78426E6D04F00DB71E2 /* FoodViewClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewClip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +86,6 @@
 			files = (
 				9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */,
 				BBF4F61F26E288AA00866758 /* iPhoneNumberField in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE16C74C26E6C95000DB71E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				BBF4F5EF26E2798800866758 /* Kennys */,
-				FE16C75026E6C95000DB71E2 /* kennyClip */,
 				FE16C76326E6C95200DB71E2 /* kennyClipTests */,
 				FE16C76E26E6C95200DB71E2 /* kennyClipUITests */,
 				BBF4F5EE26E2798800866758 /* Products */,
@@ -187,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				BBF4F5ED26E2798800866758 /* Kennys.app */,
-				FE16C74F26E6C95000DB71E2 /* kennyClip.app */,
 				FE16C76026E6C95100DB71E2 /* kennyClipTests.xctest */,
 				FE16C76B26E6C95200DB71E2 /* kennyClipUITests.xctest */,
 			);
@@ -247,6 +198,7 @@
 				BBF4F61026E27A9F00866758 /* OrderView.swift */,
 				BBF4F61226E27ABA00866758 /* DealsView.swift */,
 				BBF4F61426E27ACE00866758 /* CookinView.swift */,
+				BBE93B2926E955DF00D51E51 /* ExpertView.swift */,
 			);
 			path = Displays;
 			sourceTree = "<group>";
@@ -259,28 +211,6 @@
 				BBF4F61B26E27B6C00866758 /* MapView.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FE16C75026E6C95000DB71E2 /* kennyClip */ = {
-			isa = PBXGroup;
-			children = (
-				FE16C75126E6C95000DB71E2 /* kennyClipApp.swift */,
-				FE16C75326E6C95000DB71E2 /* ContentView.swift */,
-				FE16C78426E6D04F00DB71E2 /* FoodViewClip.swift */,
-				FE16C75526E6C95100DB71E2 /* Assets.xcassets */,
-				FE16C75A26E6C95100DB71E2 /* Info.plist */,
-				FE16C75B26E6C95100DB71E2 /* kennyClip.entitlements */,
-				FE16C75726E6C95100DB71E2 /* Preview Content */,
-			);
-			path = kennyClip;
-			sourceTree = "<group>";
-		};
-		FE16C75726E6C95100DB71E2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FE16C75826E6C95100DB71E2 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		FE16C76326E6C95200DB71E2 /* kennyClipTests */ = {
@@ -318,7 +248,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE16C77326E6C95200DB71E2 /* PBXTargetDependency */,
 			);
 			name = Kennys;
 			packageProductDependencies = (
@@ -327,23 +256,6 @@
 			productName = Kennys;
 			productReference = BBF4F5ED26E2798800866758 /* Kennys.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FE16C74E26E6C95000DB71E2 /* kennyClip */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE16C77C26E6C95200DB71E2 /* Build configuration list for PBXNativeTarget "kennyClip" */;
-			buildPhases = (
-				FE16C74B26E6C95000DB71E2 /* Sources */,
-				FE16C74C26E6C95000DB71E2 /* Frameworks */,
-				FE16C74D26E6C95000DB71E2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = kennyClip;
-			productName = kennyClip;
-			productReference = FE16C74F26E6C95000DB71E2 /* kennyClip.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 		FE16C75F26E6C95100DB71E2 /* kennyClipTests */ = {
 			isa = PBXNativeTarget;
@@ -356,7 +268,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE16C76226E6C95100DB71E2 /* PBXTargetDependency */,
 			);
 			name = kennyClipTests;
 			productName = kennyClipTests;
@@ -374,7 +285,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE16C76D26E6C95200DB71E2 /* PBXTargetDependency */,
 			);
 			name = kennyClipUITests;
 			productName = kennyClipUITests;
@@ -391,9 +301,6 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					BBF4F5EC26E2798800866758 = {
-						CreatedOnToolsVersion = 12.5.1;
-					};
-					FE16C74E26E6C95000DB71E2 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					FE16C75F26E6C95100DB71E2 = {
@@ -423,7 +330,6 @@
 			projectRoot = "";
 			targets = (
 				BBF4F5EC26E2798800866758 /* Kennys */,
-				FE16C74E26E6C95000DB71E2 /* kennyClip */,
 				FE16C75F26E6C95100DB71E2 /* kennyClipTests */,
 				FE16C76A26E6C95200DB71E2 /* kennyClipUITests */,
 			);
@@ -440,16 +346,6 @@
 				BBF4F5FA26E2798900866758 /* Preview Assets.xcassets in Resources */,
 				BBF4F62426E33C2400866758 /* Launch Screen.storyboard in Resources */,
 				BBF4F5F726E2798900866758 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE16C74D26E6C95000DB71E2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE16C75926E6C95100DB71E2 /* Preview Assets.xcassets in Resources */,
-				FE16C78026E6CE5700DB71E2 /* Assets.xcassets in Resources */,
-				FE16C75626E6C95100DB71E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,23 +420,12 @@
 				BBF4F60D26E27A5800866758 /* MenuView.swift in Sources */,
 				BBF4F60F26E27A8A00866758 /* FoodView.swift in Sources */,
 				BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */,
+				BBE93B2A26E955DF00D51E51 /* ExpertView.swift in Sources */,
 				BBF4F60726E27A0500866758 /* HomeView.swift in Sources */,
 				BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */,
 				BBF4F61526E27ACE00866758 /* CookinView.swift in Sources */,
 				BBF4F61326E27ABA00866758 /* DealsView.swift in Sources */,
 				BBF4F5F526E2798800866758 /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE16C74B26E6C95000DB71E2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE16C78526E6D04F00DB71E2 /* FoodViewClip.swift in Sources */,
-				FE16C78126E6CF1700DB71E2 /* FoodModel.swift in Sources */,
-				FE16C75426E6C95000DB71E2 /* ContentView.swift in Sources */,
-				FE16C78226E6CFDB00DB71E2 /* CategoryView.swift in Sources */,
-				FE16C75226E6C95000DB71E2 /* kennyClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,24 +446,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FE16C76226E6C95100DB71E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE16C74E26E6C95000DB71E2 /* kennyClip */;
-			targetProxy = FE16C76126E6C95100DB71E2 /* PBXContainerItemProxy */;
-		};
-		FE16C76D26E6C95200DB71E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE16C74E26E6C95000DB71E2 /* kennyClip */;
-			targetProxy = FE16C76C26E6C95200DB71E2 /* PBXContainerItemProxy */;
-		};
-		FE16C77326E6C95200DB71E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE16C74E26E6C95000DB71E2 /* kennyClip */;
-			targetProxy = FE16C77226E6C95200DB71E2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BBF4F5FB26E2798900866758 /* LaunchScreen.storyboard */ = {
@@ -717,7 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
@@ -743,7 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
@@ -755,58 +622,6 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kennysburgerjoint.Kennys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FE16C77626E6C95200DB71E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = kennyClip/kennyClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_ASSET_PATHS = "\"kennyClip/Preview Content\"";
-				DEVELOPMENT_TEAM = J3FB3HVY3D;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = kennyClip/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kennysburgerjoint.Kennys.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APPCLIP";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FE16C77726E6C95200DB71E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = kennyClip/kennyClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_ASSET_PATHS = "\"kennyClip/Preview Content\"";
-				DEVELOPMENT_TEAM = J3FB3HVY3D;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = kennyClip/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kennysburgerjoint.Kennys.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPCLIP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -913,15 +728,6 @@
 			buildConfigurations = (
 				BBF4F60226E2798900866758 /* Debug */,
 				BBF4F60326E2798900866758 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE16C77C26E6C95200DB71E2 /* Build configuration list for PBXNativeTarget "kennyClip" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE16C77626E6C95200DB71E2 /* Debug */,
-				FE16C77726E6C95200DB71E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

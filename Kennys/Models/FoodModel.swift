@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 var testy = ""
 var foodOrdered = [OrderItem]()
+var exclusive = false
 struct FoodCellView: View {
     let foodName: String
     let toppings: String

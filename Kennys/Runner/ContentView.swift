@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 struct ContentView: View {
-   
+    
     @State private var selection = 0
     @State var show = false
     @State var tag1 = 0
@@ -16,6 +16,8 @@ struct ContentView: View {
     @State var tag3 = 4
     @State var tag4 = 2
     @State var tag5 = 3
+    @State var tag6 = 4
+    
     let db = Firestore.firestore()
     @State var model = ToggleModel()
     var body: some View {
@@ -49,6 +51,7 @@ struct ContentView: View {
                                 tag2 = 1
                                 tag3 = 2
                                 tag4 = 3
+                                tag6 = 4
                             }
                         }
                 }
@@ -71,13 +74,13 @@ struct ContentView: View {
                     }
                     .tag(tag3)
             }
-//            CrewView()
-//                .tabItem {
-//                    Label("Crew", systemImage: "person.fill")
-//                    //.foregroundColor(.black)
-//                }
-//                .tag(tag4)
-//
+            //            CrewView()
+            //                .tabItem {
+            //                    Label("Crew", systemImage: "person.fill")
+            //                    //.foregroundColor(.black)
+            //                }
+            //                .tag(tag4)
+            //
             CookinView()
                 .environment(\.colorScheme, .dark)
                 .tabItem {
@@ -85,6 +88,16 @@ struct ContentView: View {
                     //.foregroundColor(.black)
                 }
                 .tag(tag4)
+            if exclusive == true {
+                ExpertView()
+                    .environment(\.colorScheme, .dark)
+                    .tabItem {
+                        Label("Staff", systemImage: "person.fill")
+                    }
+                    .tag(tag6)
+            }
+           
+            //.foregroundColor(.black)
         }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 import Foundation
 
 struct HomeView: View {
+    @State var isShow = false
+    @State var code = ""
     let swiftColor = UIColor(red: 181/255, green: 24/255, blue: 24/255, alpha: 1)
     var body: some View {
         ZStack {
@@ -44,9 +46,84 @@ struct HomeView: View {
                     .padding(.bottom)
                 
             }
-            
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isShow.toggle()
+                    }, label: {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    })
+                    .padding(50)
+                    .ignoresSafeArea()
+                }
+                Spacer()
+            }
+            if isShow == true {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 300, height: 200, alignment: .center)
+                        .foregroundColor(.gray)
+                        .opacity(0.8)
+                    VStack {
+                        Text("Employee Code:")
+                            .foregroundColor(.white)
+                            .font(.title)
+                        TextField("Your code", text: $code)
+                            .textContentType(.oneTimeCode)
+                                .keyboardType(.numberPad)
+                            .frame(width: 275, height: 30, alignment: .center)
+                            .multilineTextAlignment(.center)
+                            .font(.subheadline)
+                        Button(action: {
+                            let eq = code == "58008"
+                            if eq == true {
+                                exclusive = true
+                            }
+                            code = ""
+                            isShow = false
+                        }, label: {
+                            Text("Enter")
+                                .foregroundColor(.white)
+                        })
+                    }
+                }
+            }
         }
     }
+//    struct codeView: View {
+//        @State var code = ""
+//        var body: some View {
+//            ZStack {
+//                RoundedRectangle(cornerRadius: 25)
+//                    .frame(width: 300, height: 200, alignment: .center)
+//                    .foregroundColor(.gray)
+//                    .opacity(0.8)
+//                VStack {
+//                    Text("Employee Code:")
+//                        .foregroundColor(.white)
+//                        .font(.title)
+//                    TextField("Your code", text: $code)
+//                        .frame(width: 275, height: 30, alignment: .center)
+//                        .multilineTextAlignment(.center)
+//                        .font(.subheadline)
+//                    Button(action: {
+//                        let eq = code == "58008"
+//                        if eq == true {
+//                            exclusive = true
+//                        }
+//                        code = ""
+//                        isShow = false
+//                    }, label: {
+//                        Text("Enter")
+//                            .foregroundColor(.white)
+//                    })
+//                }
+//            }
+//        }
+//    }
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -117,6 +194,9 @@ struct LogoView: View {
             .padding(.bottom, -120)
     }
 }
+
+
+
 struct BurgerView: View {
     var body: some View {
         Image("royal")
