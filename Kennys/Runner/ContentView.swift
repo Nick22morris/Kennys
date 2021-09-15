@@ -7,8 +7,12 @@
 
 import SwiftUI
 import Firebase
+
+class Team: ObservableObject {
+    @Published var newShow = false
+}
+
 struct ContentView: View {
-    
     @State private var selection = 0
     @State var show = false
     @State var tag1 = 0
@@ -18,6 +22,8 @@ struct ContentView: View {
     @State var tag5 = 3
     @State var tag6 = 4
     
+    //@EnvironmentObject var settings: Team
+    //@Published var addScreen = false
     let db = Firestore.firestore()
     @State var model = ToggleModel()
     var body: some View {
@@ -88,22 +94,23 @@ struct ContentView: View {
                     //.foregroundColor(.black)
                 }
                 .tag(tag4)
-            if exclusive == true {
-                ExpertView()
-                    .environment(\.colorScheme, .dark)
-                    .tabItem {
-                        Label("Staff", systemImage: "person.fill")
-                    }
-                    .tag(tag6)
-            }
+//            if settings.newShow == true {
+//                ExpertView()
+//                    .environment(\.colorScheme, .dark)
+//                    .tabItem {
+//                        Label("Staff", systemImage: "person.fill")
+//                    }
+//                    .tag(tag6)
+//            }
            
             //.foregroundColor(.black)
         }
+        
     }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()//.preferredColorScheme(.dark)
+        ContentView()//.environmentObject(Team())//.preferredColorScheme(.dark)
     }
 }
 struct ToggleModel {
