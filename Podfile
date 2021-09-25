@@ -6,7 +6,7 @@ target 'Kennys' do
   use_frameworks!
 
   # Pods for Kennys
-  pod 'Firebase/Firestore'
+pod 'Firebase/Firestore'
 pod 'Firebase/Messaging'
 pod 'Firebase/Analytics'
 

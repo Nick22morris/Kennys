@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CookinView: View {
-    
+    @State var isShowingPopover = false
     var body: some View {
         NavigationView{
             List{
@@ -20,18 +20,27 @@ struct CookinView: View {
                 dealCell(image: "burgerkit")
                 dealCell(image: "monthlyspecial")
                 dealCell(image: "stayposted")
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: PasswordView()) {
+                        Text("Employee Info")
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                    }
+                    Spacer()
+                }
+                
             }
             .onAppear {
                 UITableView.appearance().separatorStyle = .none
             }
             .listStyle(SidebarListStyle())
-            
             .navigationBarTitle("What's Cooking?")
         }
+        
         .navigationViewStyle(StackNavigationViewStyle())
-        
-        
     }
+        
 }
 
 struct CookinView_Previews: PreviewProvider {
@@ -54,7 +63,7 @@ struct dealCell: View {
                     .overlay(RoundedRectangle(cornerRadius: 25.0)
                                 .stroke(Color.white, lineWidth: 4))
                     .shadow(radius: 7)
-                    //.offset(y: -140)
+                //.offset(y: -140)
                     .frame(width: 300, height: 155, alignment: .center)
                 
             }

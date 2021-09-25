@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */; };
+		BBCFA43726FF808500082928 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43626FF808500082928 /* PasswordView.swift */; };
+		BBCFA43926FF85E900082928 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43826FF85E900082928 /* Passcode.swift */; };
 		BBE93B2A26E955DF00D51E51 /* ExpertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE93B2926E955DF00D51E51 /* ExpertView.swift */; };
 		BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F026E2798800866758 /* AppDelegate.swift */; };
 		BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F5F226E2798800866758 /* SceneDelegate.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.debug.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.release.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.release.xcconfig"; sourceTree = "<group>"; };
+		BBCFA43626FF808500082928 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		BBCFA43826FF85E900082928 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		BBE93B2926E955DF00D51E51 /* ExpertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertView.swift; sourceTree = "<group>"; };
 		BBF4F5ED26E2798800866758 /* Kennys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kennys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF4F5F026E2798800866758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				BBF4F61026E27A9F00866758 /* OrderView.swift */,
 				BBF4F61226E27ABA00866758 /* DealsView.swift */,
 				BBF4F61426E27ACE00866758 /* CookinView.swift */,
+				BBCFA43626FF808500082928 /* PasswordView.swift */,
 				BBE93B2926E955DF00D51E51 /* ExpertView.swift */,
 			);
 			path = Displays;
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				BBF4F61626E27B0200866758 /* FoodModel.swift */,
+				BBCFA43826FF85E900082928 /* Passcode.swift */,
 				BBF4F61926E27B5B00866758 /* CategoryView.swift */,
 				BBF4F61B26E27B6C00866758 /* MapView.swift */,
 			);
@@ -243,7 +249,7 @@
 				BBF4F5EA26E2798800866758 /* Frameworks */,
 				BBF4F5EB26E2798800866758 /* Resources */,
 				FE16C77526E6C95200DB71E2 /* Embed App Clips */,
-				B12D8D9B5B94739C448C6715 /* [CP] Embed Pods Frameworks */,
+				C0CA4346FD78AE60E3DF7BD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +394,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B12D8D9B5B94739C448C6715 /* [CP] Embed Pods Frameworks */ = {
+		C0CA4346FD78AE60E3DF7BD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,6 +428,8 @@
 				BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */,
 				BBE93B2A26E955DF00D51E51 /* ExpertView.swift in Sources */,
 				BBF4F60726E27A0500866758 /* HomeView.swift in Sources */,
+				BBCFA43726FF808500082928 /* PasswordView.swift in Sources */,
+				BBCFA43926FF85E900082928 /* Passcode.swift in Sources */,
 				BBF4F5F326E2798800866758 /* SceneDelegate.swift in Sources */,
 				BBF4F61526E27ACE00866758 /* CookinView.swift in Sources */,
 				BBF4F61326E27ABA00866758 /* DealsView.swift in Sources */,
@@ -584,7 +592,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
@@ -610,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kennys/Kennys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Kennys/Preview Content\"";
 				DEVELOPMENT_TEAM = J3FB3HVY3D;
 				ENABLE_PREVIEWS = YES;
