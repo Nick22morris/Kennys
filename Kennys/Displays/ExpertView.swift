@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct ExpertView: View {
+    @State var firstName = ""
+    @State var lastName = ""
+    @State var code = ""
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Drinks thing")
+                .font(.title)
+            TextField("First Name", text: $firstName)
+                .padding()
+            TextField("Last Name", text: $lastName)
+                .padding()
+            TextField("Clock in code", text: $code)
+                .padding()
+            Spacer()
+            NavigationLink(destination: TestView()) {
+                ZStack{
+                    Capsule()
+                        .frame(width: 220, height: 50, alignment: .center)
+                        .foregroundColor(.blue)
+                    Text("Start")
+                        .foregroundColor(.white)
+                }
+            }
+        }
     }
 }
 
