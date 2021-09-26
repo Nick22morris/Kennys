@@ -24,36 +24,24 @@ struct TestView: View {
     
     let waitTime = 1.5
     let butWide: CGFloat = 300.0
+    let butHigh: CGFloat = 75.0
+    let max = questions.count
     var body: some View {
+        
         VStack {
             Text(question)
                 .font(.title)
                 .bold()
                 .foregroundColor(col)
-                .padding(40)
-            Spacer()
+                .padding(.top, 40)
+                .padding(.bottom, 80)
             Button {
                 let isEqual = answer1 == correct
-                if isEqual == true {
-                    col = Color.green
-                    DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                        col = Color.white
-                    }
-                    self.count += 1
-                    let iteration: testForm = questions[count]
-                    question = iteration.question
-                    wrong1 = iteration.wrong1
-                    wrong2 = iteration.wrong2
-                    wrong3 = iteration.wrong3
-                    correct = iteration.right
-                }
-                else {
-                    col = Color.red
-                }
+                cycle(passed: isEqual)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: 100, alignment: .center)
+                        .frame(width: butWide, height: butHigh, alignment: .center)
                     Text(answer1)
                         .foregroundColor(.white)
                 }
@@ -61,53 +49,24 @@ struct TestView: View {
             .padding()
             Button {
                 let isEqual = answer2 == correct
-                if isEqual == true {
-                    col = Color.green
-                    DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                        col = Color.white
-                    }
-                    self.count += 1
-                    let iteration: testForm = questions[count]
-                    question = iteration.question
-                    wrong1 = iteration.wrong1
-                    wrong2 = iteration.wrong2
-                    wrong3 = iteration.wrong3
-                    correct = iteration.right
-                }
-                else {
-                    col = Color.red
-                }
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: 100, alignment: .center)
-                    Text(answer2)
-                        .foregroundColor(.white)
-                }
+                cycle(passed: isEqual)
             }
-            .padding()
+        label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .frame(width: butWide, height: butHigh, alignment: .center)
+                Text(answer2)
+                    .foregroundColor(.white)
+            }
+        }
+        .padding()
             Button {
                 let isEqual = answer3 == correct
-                if isEqual == true {
-                    col = Color.green
-                    DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                        col = Color.white
-                    }
-                    self.count += 1
-                    let iteration: testForm = questions[count]
-                    question = iteration.question
-                    wrong1 = iteration.wrong1
-                    wrong2 = iteration.wrong2
-                    wrong3 = iteration.wrong3
-                    correct = iteration.right
-                }
-                else {
-                    col = Color.red
-                }
+                cycle(passed: isEqual)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: 100, alignment: .center)
+                        .frame(width: butWide, height: butHigh, alignment: .center)
                     Text(answer3)
                         .foregroundColor(.white)
                 }
@@ -115,43 +74,59 @@ struct TestView: View {
             .padding()
             Button {
                 let isEqual = answer4 == correct
-                if isEqual == true {
-                    col = Color.green
-                    DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                        col = Color.white
-                    }
-                    self.count += 1
-                    let iteration: testForm = questions[count]
-                    question = iteration.question
-                    wrong1 = iteration.wrong1
-                    wrong2 = iteration.wrong2
-                    wrong3 = iteration.wrong3
-                    correct = iteration.right
-                }
-                else {
-                    col = Color.red
-                }
+                cycle(passed: isEqual)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: 100, alignment: .center)
+                        .frame(width: butWide, height: butHigh, alignment: .center)
                     Text(answer4)
                         .foregroundColor(.white)
                 }
             }
             .padding()
+            Spacer()
         }
-        .padding()
-        Spacer()
     }
-    func cycle() {
-        count += 1
-        let newSet = questions[count]
-        question = newSet.question
-        answer1 = newSet.wrong1
-        answer2 = newSet.wrong2
-        answer3 = newSet.wrong3
-        answer4 = newSet.right
+    func cycle(passed: Bool) {
+        if passed == true {
+            withAnimation(.easeIn) {
+                col = Color.green
+            }
+            
+        }
+        else {
+            col = Color.red
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+            col = Color.white
+        }
+        if (count + 1) == max {
+            withAnimation(.easeIn) {
+                question = "Done"
+                answer1 = "YOU"
+                answer2 = "TOTALLY"
+                answer3 = "NAILED"
+                answer4 = "IT"
+                correct = "YOU"
+            }
+            
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+                count += 1
+                let newSet = questions[count]
+                withAnimation(.easeIn) {
+                    question = newSet.question
+                    answer1 = newSet.wrong1
+                    answer2 = newSet.wrong2
+                    answer3 = newSet.wrong3
+                    answer4 = newSet.right
+                    correct = newSet.right
+                }
+               
+            }
+           
+        }
+        
     }
 }
 struct TestView_Previews: PreviewProvider {

@@ -16,5 +16,5 @@ struct testForm {
 }
 let questions = [
     testForm(question: "How old are you", wrong1: "100", wrong2: "1", wrong3: "25", right: "669"),
-    testForm(question: "How cool are you", wrong1: "100", wrong2: "1", wrong3: "225", right: "69")
+    testForm(question: "How cool are you", wrong1: "21", wrong2: "9", wrong3: "1000", right: "69")
 ]

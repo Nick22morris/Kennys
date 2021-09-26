@@ -20,6 +20,9 @@ struct ExpertView: View {
             TextField("Last Name", text: $lastName)
                 .padding()
             TextField("Clock in code", text: $code)
+                .disableAutocorrection(true)
+                .textContentType(.oneTimeCode)
+                    .keyboardType(.numberPad)
                 .padding()
             Spacer()
             NavigationLink(destination: TestView()) {
@@ -31,6 +34,7 @@ struct ExpertView: View {
                         .foregroundColor(.white)
                 }
             }
+            .padding(25)
         }
     }
 }
