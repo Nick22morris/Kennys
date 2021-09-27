@@ -11,87 +11,99 @@ struct TestView: View {
     @State var currentDate = Date()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var count = 0
+    @State var amountRight = 0
+    @State var publishText = ""
     @State var question = questions[0].question
     @State var wrong1 = ""
     @State var wrong2 = ""
     @State var wrong3 = ""
-    @State var correct = questions[0].right
-    @State var answer1 = questions[0].wrong1
-    @State var answer2 = questions[0].wrong2
-    @State var answer3 = questions[0].wrong3
-    @State var answer4 = questions[0].right
+    @State var correct = questions[0].correct
+    @State var answer1 = questions[0].answer1
+    @State var answer2 = questions[0].answer2
+    @State var answer3 = questions[0].answer3
+    @State var answer4 = questions[0].answer4
     @State var col = Color.white
-    
+    @State var isPlaying = true
     let waitTime = 1.5
     let butWide: CGFloat = 300.0
     let butHigh: CGFloat = 75.0
     let max = questions.count
     var body: some View {
-        
-        VStack {
-            Text(question)
-                .font(.title)
-                .bold()
-                .foregroundColor(col)
-                .padding(.top, 40)
-                .padding(.bottom, 80)
-            Button {
-                let isEqual = answer1 == correct
-                cycle(passed: isEqual)
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: butHigh, alignment: .center)
-                    Text(answer1)
-                        .foregroundColor(.white)
+        NavigationView {
+            VStack {
+                if isPlaying == true {
+                    Text(question)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(col)
+                        .lineLimit(nil)
+                        .frame(width: 375, height: 160, alignment: .center)
+                    Button {
+                        let isEqual = answer1 == correct
+                        cycle(passed: isEqual, select: answer1)
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .frame(width: butWide, height: butHigh, alignment: .center)
+                            Text(answer1)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    Button {
+                        let isEqual = answer2 == correct
+                        cycle(passed: isEqual, select: answer2)
+                    }
+                label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25)
+                            .frame(width: butWide, height: butHigh, alignment: .center)
+                        Text(answer2)
+                            .foregroundColor(.white)
+                    }
                 }
-            }
-            .padding()
-            Button {
-                let isEqual = answer2 == correct
-                cycle(passed: isEqual)
-            }
-        label: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 25)
-                    .frame(width: butWide, height: butHigh, alignment: .center)
-                Text(answer2)
-                    .foregroundColor(.white)
-            }
-        }
-        .padding()
-            Button {
-                let isEqual = answer3 == correct
-                cycle(passed: isEqual)
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: butHigh, alignment: .center)
-                    Text(answer3)
-                        .foregroundColor(.white)
+                    Button {
+                        let isEqual = answer3 == correct
+                        cycle(passed: isEqual, select: answer3)
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .frame(width: butWide, height: butHigh, alignment: .center)
+                            Text(answer3)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    Button {
+                        let isEqual = answer4 == correct
+                        cycle(passed: isEqual, select: answer4)
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .frame(width: butWide, height: butHigh, alignment: .center)
+                            Text(answer4)
+                                .foregroundColor(.white)
+                        }
+                    }
+                } else {
+                    NavigationLink(destination: ResultView(score: publishText), label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .frame(width: butWide, height: butHigh, alignment: .center)
+                            Text("View Score")
+                                .foregroundColor(.white)
+                        }
+                    })
                 }
+                Spacer()
             }
-            .padding()
-            Button {
-                let isEqual = answer4 == correct
-                cycle(passed: isEqual)
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: butWide, height: butHigh, alignment: .center)
-                    Text(answer4)
-                        .foregroundColor(.white)
-                }
-            }
-            .padding()
-            Spacer()
+            .navigationBarHidden(true)
         }
     }
-    func cycle(passed: Bool) {
+    func cycle(passed: Bool, select: String) {
         if passed == true {
             withAnimation(.easeIn) {
                 col = Color.green
             }
+            amountRight += 1
             
         }
         else {
@@ -102,6 +114,8 @@ struct TestView: View {
         }
         if (count + 1) == max {
             withAnimation(.easeIn) {
+                publishText.append("\n\nScore: " + String(amountRight)+"/"+String(max))
+                isPlaying = false
                 question = "Done"
                 answer1 = "YOU"
                 answer2 = "TOTALLY"
@@ -113,18 +127,21 @@ struct TestView: View {
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
                 count += 1
+                publishText.append("Question: " + question + "\n")
+                publishText.append("Your Answer: " + select + "\n")
+                publishText.append("Right Answer: " + correct + "\n\n")
                 let newSet = questions[count]
                 withAnimation(.easeIn) {
                     question = newSet.question
-                    answer1 = newSet.wrong1
-                    answer2 = newSet.wrong2
-                    answer3 = newSet.wrong3
-                    answer4 = newSet.right
-                    correct = newSet.right
+                    answer1 = newSet.answer1
+                    answer2 = newSet.answer2
+                    answer3 = newSet.answer3
+                    answer4 = newSet.answer4
+                    correct = newSet.correct
                 }
-               
+                
             }
-           
+            
         }
         
     }

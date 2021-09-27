@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */; };
+		BBBAE12127015B95002B103A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAE12027015B95002B103A /* ResultView.swift */; };
 		BBCFA43726FF808500082928 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43626FF808500082928 /* PasswordView.swift */; };
 		BBCFA43926FF85E900082928 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43826FF85E900082928 /* Passcode.swift */; };
 		BBCFA43B26FFA79700082928 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43A26FFA79700082928 /* TestView.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		594874D000470610FBF98C06 /* Pods-Kennys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.debug.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.release.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.release.xcconfig"; sourceTree = "<group>"; };
+		BBBAE12027015B95002B103A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		BBCFA43626FF808500082928 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		BBCFA43826FF85E900082928 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		BBCFA43A26FFA79700082928 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				BBCFA43626FF808500082928 /* PasswordView.swift */,
 				BBE93B2926E955DF00D51E51 /* ExpertView.swift */,
 				BBCFA43A26FFA79700082928 /* TestView.swift */,
+				BBBAE12027015B95002B103A /* ResultView.swift */,
 			);
 			path = Displays;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				BBF4F60A26E27A3600866758 /* CrewView.swift in Sources */,
 				BBF4F61126E27A9F00866758 /* OrderView.swift in Sources */,
 				BBF4F61A26E27B5B00866758 /* CategoryView.swift in Sources */,
+				BBBAE12127015B95002B103A /* ResultView.swift in Sources */,
 				BBCFA43D26FFA8A300082928 /* TestModel.swift in Sources */,
 				BBF4F61726E27B0200866758 /* FoodModel.swift in Sources */,
 				BBF4F61C26E27B6C00866758 /* MapView.swift in Sources */,
