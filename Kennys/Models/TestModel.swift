@@ -23,3 +23,9 @@ let questions = [
     testForm(question: "Which of the following is south of Detroit?", answer1: "Canada", answer2: "Paris", answer3: "Ireland", answer4: "Alaska", correct : "Canada"),
     testForm(question: "What was the original name of Google?", answer1: "Find it", answer2: "Easy Search", answer3: "Backrub", answer4: "Soap box", correct : "Backrub"),
 ]
+struct reportForm{
+    let firstName : String
+    let lastName: String
+    let code: String
+    let report: String
+}

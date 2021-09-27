@@ -22,10 +22,10 @@ struct ExpertView: View {
             TextField("Clock in code", text: $code)
                 .disableAutocorrection(true)
                 .textContentType(.oneTimeCode)
-                    .keyboardType(.numberPad)
+                .keyboardType(.numberPad)
                 .padding()
             Spacer()
-            NavigationLink(destination: TestView()) {
+            NavigationLink(destination: TestView(firstName: firstName, lastName: lastName, clock: code)) {
                 ZStack{
                     Capsule()
                         .frame(width: 220, height: 50, alignment: .center)
@@ -36,6 +36,7 @@ struct ExpertView: View {
             }
             .padding(25)
         }
+        
     }
 }
 

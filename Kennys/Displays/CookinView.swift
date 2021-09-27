@@ -11,31 +11,35 @@ struct CookinView: View {
     @State var isShowingPopover = false
     var body: some View {
         NavigationView{
-            List{
-                dealCell(image: "ourburgers")
-                dealCell(image: "martinimonday")
-                dealCell(image: "ribs")
-                dealCell(image: "happyhour")
-                dealCell(image: "burgerbar")
-                dealCell(image: "burgerkit")
-                dealCell(image: "monthlyspecial")
-                dealCell(image: "stayposted")
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: PasswordView()) {
-                        Text("Employee Info")
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
+            ZStack {
+                List{
+                    dealCell(image: "ourburgers")
+                    dealCell(image: "martinimonday")
+                    dealCell(image: "ribs")
+                    dealCell(image: "happyhour")
+                    dealCell(image: "burgerbar")
+                    dealCell(image: "burgerkit")
+                    dealCell(image: "monthlyspecial")
+                    dealCell(image: "stayposted")
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: PasswordView()) {
+                            Text("Employee Info")
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        Spacer()
                     }
-                    Spacer()
+                    
                 }
+                .onAppear {
+                    UITableView.appearance().separatorStyle = .none
+                }
+                .listStyle(SidebarListStyle())
                 
-            }
-            .onAppear {
-                UITableView.appearance().separatorStyle = .none
-            }
-            .listStyle(SidebarListStyle())
+                
             .navigationBarTitle("What's Cooking?")
+            }
         }
         
         .navigationViewStyle(StackNavigationViewStyle())

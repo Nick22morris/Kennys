@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TestView: View {
+    let db = Firestore.firestore()
+    
+    let firstName: String
+    let lastName: String
+    let clock: String
+    
     @State var currentDate = Date()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var count = 0
@@ -29,7 +36,6 @@ struct TestView: View {
     let butHigh: CGFloat = 75.0
     let max = questions.count
     var body: some View {
-        NavigationView {
             VStack {
                 if isPlaying == true {
                     Text(question)
@@ -83,6 +89,7 @@ struct TestView: View {
                                 .foregroundColor(.white)
                         }
                     }
+                    Spacer()
                 } else {
                     NavigationLink(destination: ResultView(score: publishText), label: {
                         ZStack {
@@ -93,11 +100,9 @@ struct TestView: View {
                         }
                     })
                 }
-                Spacer()
+                
             }
-            .navigationBarHidden(true)
-        }
-    }
+            .navigationBarHidden(true)    }
     func cycle(passed: Bool, select: String) {
         if passed == true {
             withAnimation(.easeIn) {
@@ -113,8 +118,10 @@ struct TestView: View {
             col = Color.white
         }
         if (count + 1) == max {
+            
             withAnimation(.easeIn) {
                 publishText.append("\n\nScore: " + String(amountRight)+"/"+String(max))
+                submitScores(first: firstName, last: lastName, code: clock, report: publishText)
                 isPlaying = false
                 question = "Done"
                 answer1 = "YOU"
@@ -148,7 +155,14 @@ struct TestView: View {
 }
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView().preferredColorScheme(.dark)
+        TestView(firstName: "John", lastName: "Cena", clock: "6969").preferredColorScheme(.dark)
     }
 }
-
+func submitScores(first: String, last: String, code: String, report: String) {
+    db.collection("a-scores").addDocument(data: [
+        "first" : first,
+        "last" : last,
+        "code" : code,
+        "report" : report
+    ])
+}

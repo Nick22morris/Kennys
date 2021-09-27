@@ -10,19 +10,15 @@ import SwiftUI
 struct ResultView: View {
     let score: String
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
-                    Text("Results")
-                        .font(.title)
-                        .bold()
-                    Text(score)
-                }
-                
+        ScrollView {
+            VStack {
+                Text("Results")
+                    .font(.title)
+                    .bold()
+                Text(score)
             }
-            .navigationBarHidden(true)
+            
         }
-        
     }
 }
 
