@@ -15,6 +15,8 @@ struct TestView: View {
     let lastName: String
     let clock: String
     
+    
+    
     @State var currentDate = Date()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var count = 0
@@ -118,9 +120,12 @@ struct TestView: View {
             col = Color.white
         }
         if (count + 1) == max {
-            
+            publishText.append("Question: " + question + "\n")
+            publishText.append("Your Answer: " + select + "\n")
+            publishText.append("Right Answer: " + correct + "\n\n")
             withAnimation(.easeIn) {
                 publishText.append("\n\nScore: " + String(amountRight)+"/"+String(max))
+                publishText.append("\n\nGrade: " + String((Float(amountRight)/Float(max))*100) + "%")
                 submitScores(first: firstName, last: lastName, code: clock, report: publishText)
                 isPlaying = false
                 question = "Done"
@@ -159,10 +164,12 @@ struct TestView_Previews: PreviewProvider {
     }
 }
 func submitScores(first: String, last: String, code: String, report: String) {
+    let t = Date().timeIntervalSince1970
     db.collection("a-scores").addDocument(data: [
         "first" : first,
         "last" : last,
         "code" : code,
-        "report" : report
+        "report" : report,
+        "time" : t
     ])
 }

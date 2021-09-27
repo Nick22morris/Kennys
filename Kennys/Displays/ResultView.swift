@@ -15,7 +15,9 @@ struct ResultView: View {
                 Text("Results")
                     .font(.title)
                     .bold()
+                    .padding()
                 Text(score)
+                    .padding()
             }
             
         }

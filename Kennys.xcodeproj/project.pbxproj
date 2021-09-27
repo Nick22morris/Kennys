@@ -10,6 +10,7 @@
 		9E6DB5D6E56AA9B6022462E9 /* Pods_Kennys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFC2BEEC95B86AD3D008B0 /* Pods_Kennys.framework */; };
 		BBBAE12127015B95002B103A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAE12027015B95002B103A /* ResultView.swift */; };
 		BBBAE12327022BFC002B103A /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAE12227022BFC002B103A /* ReviewView.swift */; };
+		BBBAE12527023E12002B103A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAE12427023E12002B103A /* ScoreView.swift */; };
 		BBCFA43726FF808500082928 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43626FF808500082928 /* PasswordView.swift */; };
 		BBCFA43926FF85E900082928 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43826FF85E900082928 /* Passcode.swift */; };
 		BBCFA43B26FFA79700082928 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCFA43A26FFA79700082928 /* TestView.swift */; };
@@ -56,6 +57,7 @@
 		5A6690B3D1F775B32F0E25C8 /* Pods-Kennys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kennys.release.xcconfig"; path = "Target Support Files/Pods-Kennys/Pods-Kennys.release.xcconfig"; sourceTree = "<group>"; };
 		BBBAE12027015B95002B103A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		BBBAE12227022BFC002B103A /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		BBBAE12427023E12002B103A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		BBCFA43626FF808500082928 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		BBCFA43826FF85E900082928 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		BBCFA43A26FFA79700082928 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				BBCFA43A26FFA79700082928 /* TestView.swift */,
 				BBBAE12027015B95002B103A /* ResultView.swift */,
 				BBBAE12227022BFC002B103A /* ReviewView.swift */,
+				BBBAE12427023E12002B103A /* ScoreView.swift */,
 			);
 			path = Displays;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				BBF4F60D26E27A5800866758 /* MenuView.swift in Sources */,
 				BBF4F60F26E27A8A00866758 /* FoodView.swift in Sources */,
 				BBF4F5F126E2798800866758 /* AppDelegate.swift in Sources */,
+				BBBAE12527023E12002B103A /* ScoreView.swift in Sources */,
 				BBCFA43B26FFA79700082928 /* TestView.swift in Sources */,
 				BBE93B2A26E955DF00D51E51 /* ExpertView.swift in Sources */,
 				BBF4F60726E27A0500866758 /* HomeView.swift in Sources */,
